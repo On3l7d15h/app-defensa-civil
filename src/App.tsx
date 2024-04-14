@@ -22,6 +22,16 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Home from './pages/Home';
+import Historia from './pages/Historia';
+import MapaAlbergues from './pages/MapaAlbergues';
+import MedidasPreventivas from './pages/MedidasPreventivas';
+import Miembros from './pages/Miembros';
+import QuieroVoluntario from './pages/QuieroVoluntario';
+import Videos from './pages/Videos';
+import Albergues from './pages/Albergues';
+import Noticias from './pages/Noticias';
+import Servicios from './pages/Servicios';
 
 setupIonicReact();
 
@@ -33,10 +43,34 @@ const App: React.FC = () => {
           <Menu />
           <IonRouterOutlet id="main">
             <Route path="/" exact={true}>
-              <Redirect to="/Inicio" />
+              <Home />
             </Route>
-            <Route path="/:name" exact={true}>
-              <Page />
+            <Route path="/Historia" exact={true}>
+              <Historia />
+            </Route>
+            <Route path="/Servicios" exact={true}>
+              <Servicios />
+            </Route>
+            <Route path="/Noticias" exact={true}>
+              <Noticias />
+            </Route>
+            <Route path="/Videos" exact={true}>
+              <Videos />
+            </Route>
+            <Route path="/Albergues" exact={true}>
+              <Albergues />
+            </Route>
+            <Route path="/Mapa" exact={true}>
+              <MapaAlbergues />
+            </Route>
+            <Route path="/Medidas" exact={true}>
+              <MedidasPreventivas />
+            </Route>
+            <Route path="/Miembros" exact={true}>
+              <Miembros />
+            </Route>
+            <Route path="/Voluntario" exact={true}>
+              <QuieroVoluntario />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
