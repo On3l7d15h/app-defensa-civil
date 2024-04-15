@@ -32,6 +32,10 @@ import Videos from './pages/Videos';
 import Albergues from './pages/Albergues';
 import Noticias from './pages/Noticias';
 import Servicios from './pages/Servicios';
+import Noticia from './pages/subpages/Noticia';
+import Medida from './pages/subpages/Medida';
+import Albergue from './pages/subpages/Albergue';
+import Acercade from './pages/Acercade';
 
 setupIonicReact();
 
@@ -54,11 +58,17 @@ const App: React.FC = () => {
             <Route path="/Noticias" exact={true}>
               <Noticias />
             </Route>
+            <Route path="/Noticias/noticia" exact={true}>
+              <Noticia />
+            </Route>
             <Route path="/Videos" exact={true}>
               <Videos />
             </Route>
             <Route path="/Albergues" exact={true}>
               <Albergues />
+            </Route>
+            <Route path="/Albergues/Albergue" exact={true}>
+              <Albergue />
             </Route>
             <Route path="/Mapa" exact={true}>
               <MapaAlbergues />
@@ -66,11 +76,17 @@ const App: React.FC = () => {
             <Route path="/Medidas" exact={true}>
               <MedidasPreventivas />
             </Route>
+            <Route path="/Medidas/Medida" exact={true}>
+              <Medida />
+            </Route>
             <Route path="/Miembros" exact={true}>
               <Miembros />
             </Route>
             <Route path="/Voluntario" exact={true}>
               <QuieroVoluntario />
+            </Route>
+            <Route path="/Acercade" exact={true}>
+              <Acercade />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>

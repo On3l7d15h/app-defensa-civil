@@ -3,6 +3,7 @@ import {
   IonIcon,
   IonImg,
   IonItem,
+  IonItemDivider,
   IonLabel,
   IonList,
   IonListHeader,
@@ -12,7 +13,7 @@ import {
 } from '@ionic/react';
 
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, bookOutline, bookSharp, bookmarkOutline, buildOutline, buildSharp, heartOutline, heartSharp, homeOutline, homeSharp, mailOutline, mailSharp, mapOutline, mapSharp, paperPlaneOutline, paperPlaneSharp, personAddOutline, personAddSharp, personOutline, personSharp, trashOutline, trashSharp, videocamOutline, videocamSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { archiveOutline, archiveSharp, bookOutline, bookSharp, bookmarkOutline, buildOutline, buildSharp, heartOutline, heartSharp, homeOutline, homeSharp, mailOutline, mailSharp, mapOutline, mapSharp, paperPlaneOutline, paperPlaneSharp, person, personAddOutline, personAddSharp, personOutline, personSharp, trashOutline, trashSharp, videocamOutline, videocamSharp, warningOutline, warningSharp } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -110,6 +111,15 @@ const Menu: React.FC = () => {
             );
           })}
         </IonList>
+        
+
+        <IonMenuToggle autoHide={false} className="">
+          <IonItem className={location.pathname === "/Acercade" ? 'selected' : ''} routerLink={"/Acercade"} routerDirection="none" lines="none" detail={false}>
+            <IonIcon aria-hidden="true" slot="start" ios={personOutline} md={personSharp} />
+            <IonLabel>Acerca de</IonLabel>
+          </IonItem>
+        </IonMenuToggle>
+        
       </IonContent>
     </IonMenu>
   );
